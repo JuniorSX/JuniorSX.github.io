@@ -1,7 +1,7 @@
 const playMusic = () => {
     let music = new Audio('./sounds/uepa.mp3');
     music.play();
-    }
+}
 const playMe = document.querySelectorAll('.playMe');
 for (const button of playMe) {
     button.addEventListener('click', playMusic);
@@ -37,5 +37,5 @@ sextou.addEventListener('click', mufasa);
 
 
 window.onload = () => {
-    
+
 }
