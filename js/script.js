@@ -8,15 +8,14 @@ for (const button of playMe) {
 }
 const mufasa = () =>{
     const videoSextou = document.querySelector('#sexta');
-    const blocoBotoes = document.querySelector('.buttons');
+    const blocoSite = document.querySelector('main');
     const bgColor = document.querySelectorAll('i');
-    console.log(bgColor);
     const videoPlayer = document.querySelector('#custom_video_play')
 
     if (videoSextou.classList.contains('naoSextou')) {
         videoSextou.classList.remove('naoSextou');
         videoSextou.classList.add('sextou');
-        blocoBotoes.setAttribute('style', `display: none`);
+        blocoSite.setAttribute('style', `display: none`);
         for (const bolha of bgColor) {
             bolha.setAttribute('style', `display: block`)
         }
@@ -25,7 +24,7 @@ const mufasa = () =>{
     }else{
         videoSextou.classList.remove('sextou');
         videoSextou.classList.add('naoSextou');
-        blocoBotoes.setAttribute('style', `display: flex`);
+        blocoSite.setAttribute('style', `display: flex`);
         for (const bolha of bgColor) {
             bolha.setAttribute('style', `display: none`)
         }
@@ -35,6 +34,21 @@ const mufasa = () =>{
 const sextou = document.querySelector('#sextou');
 sextou.addEventListener('click', mufasa);
 
+    const pegaH3 = document.querySelectorAll('.descBotao'); 
+    const buscador = document.getElementById('buscaButton'); 
+
+    buscador.addEventListener('input', () => {
+        pegaH3.forEach(h3 => {
+            if (h3.textContent.includes(buscador.value)) { 
+                h3.parentElement.classList.remove('invis')
+                //console.log('achou');
+
+            } else {
+                h3.parentElement.classList.add('invis')
+                //console.log('nao achou');
+            }
+        });
+    })
 
 window.onload = () => {
 

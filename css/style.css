@@ -7,6 +7,9 @@ a{
     color:#333;
     text-decoration: none;
 }
+a:hover{
+  color:#666;
+}
 body{
     background-color: azure;
     font-family: 'Familjen Grotesk', sans-serif;
@@ -15,6 +18,25 @@ body{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
+input{
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;  
+}
+input:focus{
+  border-color: #0366d6;
+  outline: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 header{
     width: 100%;
@@ -26,6 +48,14 @@ header{
     align-items: center;
     border-bottom: 1px solid #eff1f4;
     z-index: 100;
+}
+h1.logoTemp{
+  font-size:25px;
+  color:#038a2b;
+  cursor: pointer;
+}
+h1.logoTemp:hover{
+  color:#02531a
 }
 header nav{
     display: flex;
@@ -41,36 +71,38 @@ header nav{
     display: block;
     z-index: 50;
 }
+#sexta{
+  margin-top:50px;
+}
 main{
-    margin-top: 50px;
-    width: 80%;
-    background-color: aquamarine;
-    display: flex;
-    min-height: 300px;
-    flex-direction: column;
+  margin-top: 50px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #e1e4e8;
 }
 main .buttons{
-    display: flex;
-    background-color: bisque;
-    padding: 30px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 main .buttons .button{
-    background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 100px;
     justify-content: space-evenly;
+    margin: 10px;
 }
-main .buttons .button button{
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border-radius: 50px;
+.btnTitle{
+  text-align: center;
+  margin-top: 15px
 }
 footer{
     margin-top: 50px;
@@ -80,7 +112,47 @@ footer{
     align-items: center;
     justify-content: center;
 }
+.googleButton{
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0 20px;
+  border-bottom: 1px solid #e1e4e8;
+}
+.googleButton h1{
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.googleButton input{
+  width: 40%;
+}
+.playMe {
+  padding: 10px 15px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04b93b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #666;
+    text-transform: uppercase;
+}
 
+.playMe:hover {background-color: #3e8e41}
+
+.playMe:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #2c2c2c;
+  transform: translateY(4px);
+}
+.invis {
+  display: none !important;
+}
 
     i{
         display: none;
