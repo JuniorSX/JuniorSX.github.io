@@ -39,7 +39,7 @@ sextou.addEventListener('click', mufasa);
 
     buscador.addEventListener('input', () => {
         pegaH3.forEach(h3 => {
-            if (h3.textContent.includes(buscador.value)) { 
+            if (h3.textContent.toLowerCase().includes(buscador.value.toLowerCase())) { 
                 h3.parentElement.classList.remove('invis')
                 //console.log('achou');
 
