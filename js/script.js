@@ -39,6 +39,7 @@ const mufasa = () => {
         videoSextou.classList.remove('sextou');
         videoSextou.classList.add('naoSextou');
         blocoSite.setAttribute('style', `display: flex`);
+        body.setAttribute('style', `overflow: none`);
         for (const bolha of bgColor) {
             bolha.setAttribute('style', `display: none`)
         }
