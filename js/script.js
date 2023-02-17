@@ -21,6 +21,7 @@ for (const button of playMe) {
 const mufasa = () => {
     const videoSextou = document.querySelector('#sexta');
     const blocoSite = document.querySelector('main');
+    const body = document.querySelector('body');
     const bgColor = document.querySelectorAll('i');
     const videoPlayer = document.querySelector('#custom_video_play')
 
@@ -28,6 +29,7 @@ const mufasa = () => {
         videoSextou.classList.remove('naoSextou');
         videoSextou.classList.add('sextou');
         blocoSite.setAttribute('style', `display: none`);
+        body.setAttribute('style', `overflow: hidden`);
         for (const bolha of bgColor) {
             bolha.setAttribute('style', `display: block`)
         }
