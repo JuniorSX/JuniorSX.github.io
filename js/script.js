@@ -1,12 +1,14 @@
-const playMusic = () => {
-    let music = new Audio('./sounds/uepa.mp3');
+const playMe = document.querySelectorAll('.playMe');
+
+const playMusic = (evt) => {
+    let button = evt.target.id
+    let music = new Audio(`./sounds/${button}.mp3`);
     music.play();
 }
-const playMe = document.querySelectorAll('.playMe');
 for (const button of playMe) {
     button.addEventListener('click', playMusic);
 }
-const mufasa = () =>{
+const mufasa = () => {
     const videoSextou = document.querySelector('#sexta');
     const blocoSite = document.querySelector('main');
     const bgColor = document.querySelectorAll('i');
@@ -21,7 +23,7 @@ const mufasa = () =>{
         }
         videoPlayer.currentTime = 0;
         videoPlayer.play();
-    }else{
+    } else {
         videoSextou.classList.remove('sextou');
         videoSextou.classList.add('naoSextou');
         blocoSite.setAttribute('style', `display: flex`);
@@ -31,24 +33,27 @@ const mufasa = () =>{
         videoPlayer.pause();
     }
 }
+
+
+
 const sextou = document.querySelector('#sextou');
 sextou.addEventListener('click', mufasa);
 
-    const pegaH3 = document.querySelectorAll('.descBotao'); 
-    const buscador = document.getElementById('buscaButton'); 
+const pegaH3 = document.querySelectorAll('.descBotao');
+const buscador = document.getElementById('buscaButton');
 
-    buscador.addEventListener('input', () => {
-        pegaH3.forEach(h3 => {
-            if (h3.textContent.toLowerCase().includes(buscador.value.toLowerCase())) { 
-                h3.parentElement.classList.remove('invis')
-                //console.log('achou');
+buscador.addEventListener('input', () => {
+    pegaH3.forEach(h3 => {
+        if (h3.textContent.toLowerCase().includes(buscador.value.toLowerCase())) {
+            h3.parentElement.classList.remove('invis')
+            //console.log('achou');
 
-            } else {
-                h3.parentElement.classList.add('invis')
-                //console.log('nao achou');
-            }
-        });
-    })
+        } else {
+            h3.parentElement.classList.add('invis')
+            //console.log('nao achou');
+        }
+    });
+})
 
 window.onload = () => {
 
