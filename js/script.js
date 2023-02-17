@@ -1,10 +1,20 @@
 const playMe = document.querySelectorAll('.playMe');
 
+let isPlaying = false;
 const playMusic = (evt) => {
     let button = evt.target.id
     let music = new Audio(`./sounds/${button}.mp3`);
-    music.play();
+    if (isPlaying === false) {
+        music.play();
+        isPlaying = true;
+        console.log('ta tocando');
+      } else {
+        music.pause();
+        isPlaying = false;
+        console.log('ta pausado');
+      }
 }
+
 for (const button of playMe) {
     button.addEventListener('click', playMusic);
 }
