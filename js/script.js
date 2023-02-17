@@ -15,7 +15,6 @@ const playMusic = (evt) => {
         console.log('ta pausado');
     } */
 }
-
 for (const button of playMe) {
     button.addEventListener('click', playMusic);
 }
@@ -45,8 +44,6 @@ const mufasa = () => {
     }
 }
 
-
-
 const sextou = document.querySelector('#sextou');
 sextou.addEventListener('click', mufasa);
 
@@ -65,7 +62,6 @@ buscador.addEventListener('input', () => {
         }
     });
 })
-
 window.onload = () => {
 
 }
