@@ -8,11 +8,11 @@ const playMusic = (evt) => {
         music.play();
         isPlaying = true;
         console.log('ta tocando');
-      } else {
+    } else {
         music.pause();
         isPlaying = false;
         console.log('ta pausado');
-      }
+    }
 }
 
 for (const button of playMe) {
