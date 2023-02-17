@@ -4,7 +4,8 @@ let isPlaying = false;
 const playMusic = (evt) => {
     let button = evt.target.id
     let music = new Audio(`./sounds/${button}.mp3`);
-    if (isPlaying === false) {
+    music.play();
+    /* if (isPlaying === false) {
         music.play();
         isPlaying = true;
         console.log('ta tocando');
@@ -12,7 +13,7 @@ const playMusic = (evt) => {
         music.pause();
         isPlaying = false;
         console.log('ta pausado');
-    }
+    } */
 }
 
 for (const button of playMe) {
