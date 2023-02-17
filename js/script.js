@@ -1,19 +1,18 @@
 const playMe = document.querySelectorAll('.playMe');
-
-let isPlaying = false;
 const playMusic = (evt) => {
+    const playBtn = () => {
+        music.play();
+        document.body.appendChild(music);
+    };
     let button = evt.target.id
     let music = new Audio(`./sounds/${button}.mp3`);
-    music.play();
-    /* if (isPlaying === false) {
-        music.play();
-        isPlaying = true;
-        console.log('ta tocando');
+    const audio = document.getElementsByTagName('audio')[0];
+    if (audio) {
+        audio.remove();
+        playBtn();
     } else {
-        music.pause();
-        isPlaying = false;
-        console.log('ta pausado');
-    } */
+        playBtn();
+    }
 }
 for (const button of playMe) {
     button.addEventListener('click', playMusic);
